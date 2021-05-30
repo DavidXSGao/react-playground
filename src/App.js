@@ -1,13 +1,19 @@
-import { HashRouter as Router } from "react-router-dom";
-// import RouterSwitch from "../components/RouterSwitch";
 import "./App.css";
-
+import Icons from "./components/Icons";
+import ToastNotifications from "./components/ToastNotifications";
+import SampleModal from "./components/SampleModal";
+import SampleTooltips from "./components/SampleTooltips";
+import CountAnimation from "./components/CountAnimation";
+import IdleTimerContainer from "./components/IdleTimerContainer";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <h1> Hello</h1>
-      </header>
+      <Icons />
+      <ToastNotifications />
+      <SampleModal />
+      <SampleTooltips />
+      <CountAnimation />
+      <IdleTimerContainer />
     </div>
   );
 }
