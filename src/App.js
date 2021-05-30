@@ -9,11 +9,17 @@ function App() {
   return (
     <div className="App">
       <Icons />
+      <br/>
       <ToastNotifications />
+      <br/>
       <SampleModal />
+      <br/>
       <SampleTooltips />
+      <br/>
       <CountAnimation />
+      <br/>
       <IdleTimerContainer />
+      <br/>
     </div>
   );
 }
