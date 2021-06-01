@@ -29,7 +29,9 @@ function IdleTimerContainer() {
 
   return ReactDOM.createPortal(
     <>
-      <button onClick={() => setIsLoggedIn(true)}>Log in</button>
+      <button onClick={() => setIsLoggedIn((prevState) => !prevState)}>
+        {isLoggedIn ? "Log out" : "Log in"}
+      </button>
       {isLoggedIn ? <div>Logged In</div> : <div>Logged Out</div>}
       <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
         <h2>You've been idle for awhile!</h2>
