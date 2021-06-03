@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
+import { AppContext } from "./../../App";
 
 const SidebarLink = styled(Link)`
   display: flex;
@@ -43,13 +45,22 @@ const DropdownLink = styled(Link)`
 
 function SidebarMenu({ item }) {
   const [isSubNavDisplayed, setIsSubNavDisplayed] = useState(false);
+  const appContext = useContext(AppContext);
 
-  const toggleSubNav = () =>
+  const toggleSubNav = () => {
     setIsSubNavDisplayed((prevDisplayed) => !prevDisplayed);
+  };
+
+  const toggleNav = () => {
+    appContext.dispatch({ type: "toggleNavbar" });
+  };
 
   return (
     <>
-      <SidebarLink to={item.path} onClick={item.subNav && toggleSubNav}>
+      <SidebarLink
+        to={item.path}
+        onClick={(item.subNav && toggleSubNav) || toggleNav}
+      >
         <div>
           {item.icon}
           <SidebarLabel>{item.title}</SidebarLabel>
