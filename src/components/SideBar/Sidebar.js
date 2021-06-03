@@ -32,7 +32,7 @@ const NavIcon = styled(Link)`
 const NavTitle = styled.h1`
   position: absolute; /* new */
   // left: 50%;
-  left: ${({ isSidebarDisplayed }) => (isSidebarDisplayed ? "60%" : "50%")};
+  left: ${({ isSidebarDisplayed }) => (isSidebarDisplayed ? `calc(50% + 250px / 2)` : "50%")};
   transform: translateX(-50%);
   transition: 350ms;
 `;
