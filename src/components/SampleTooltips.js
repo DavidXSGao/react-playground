@@ -4,9 +4,9 @@ import "tippy.js/dist/tippy.css";
 
 // https://github.com/atomiks/tippyjs-react
 
-// const CustomTooltip = () => {
-//   return <span style={{ color: "orange" }}>Colored Custom Tooltip</span>;
-// };
+const CustomTooltip = () => {
+  return <span style={{ color: "orange" }}>Colored Custom Tooltip</span>;
+};
 
 /**
  * if want to use custom component as child to Tippy, need to forward the ref of the DOM node
@@ -22,14 +22,16 @@ const CustomChild = forwardRef((props, ref) => {
 function SampleTooltips() {
   return (
     <>
-      {/* <Tippy
+      <Tippy
         content={<CustomTooltip />}
         arrow={false}
         delay={1000}
         placement="right"
       >
         <button>Hover for a tooltip</button>
-      </Tippy> */}
+      </Tippy>
+      <br/>
+      <br/>
       <Tippy
         content="custom tooltip component message"
         arrow={false}

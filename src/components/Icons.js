@@ -6,7 +6,7 @@ import { MdAlarm } from "react-icons/md";
 function Icons() {
   return (
     <IconContext.Provider value={{ color: "blue", size: "2rem" }}>
-      <FaReact />
+      <FaReact size="10rem"/>
       <MdAlarm color="red" />
     </IconContext.Provider>
   );

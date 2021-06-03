@@ -19,7 +19,6 @@ function Books() {
         }
       });
       if (node) observer.current.observe(node);
-      console.log(node);
     },
     [loading, hasMore]
   );
