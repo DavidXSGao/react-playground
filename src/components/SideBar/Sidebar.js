@@ -17,6 +17,7 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: #fff;
 `;
 
 const NavIcon = styled(Link)`
@@ -26,6 +27,14 @@ const NavIcon = styled(Link)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+`;
+
+const NavTitle = styled.h1`
+  position: absolute; /* new */
+  // left: 50%;
+  left: ${({ isSidebarDisplayed }) => (isSidebarDisplayed ? "60%" : "50%")};
+  transform: translateX(-50%);
+  transition: 350ms;
 `;
 
 const SidebarNav = styled.div`
@@ -63,6 +72,9 @@ function Sidebar() {
           <NavIcon to="#">
             <FaIcons.FaBars onClick={toggleSidebar} />
           </NavIcon>
+          <NavTitle isSidebarDisplayed={appContext.state.isSidebarDisplayed}>
+            React Experiments
+          </NavTitle>
         </Nav>
         <SidebarNav isSidebarDisplayed={appContext.state.isSidebarDisplayed}>
           <NavIcon to="#">

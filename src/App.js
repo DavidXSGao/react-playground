@@ -28,7 +28,14 @@ function App() {
       <div className="App">
         <Router>
           <Sidebar />
-          <div className="Main" style={{ marginLeft: state.isSidebarDisplayed ? '250px' : '0px', paddingTop: '10px' }}>
+          <div
+            className="Main"
+            style={{
+              marginLeft: state.isSidebarDisplayed ? "250px" : "0px",
+              paddingTop: "10px",
+              transition: "350ms",
+            }}
+          >
             <RouterSwitch />
           </div>
         </Router>
