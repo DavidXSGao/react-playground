@@ -12,6 +12,8 @@ import CreditCard from "./CreditCard";
 import DatePickerContainer from "./DatePickerContainer";
 import VideoPlayer from "./VideoPlayer";
 import Books from "./InfiniteScroll/Books";
+import FlexBoxContainer from "./FlexBoxContainer";
+import CovidMap from "./CovidMap/CovidMap";
 
 function RouterSwitch() {
   return (
@@ -28,6 +30,7 @@ function RouterSwitch() {
       <Route path="/datePicker" exact component={DatePickerContainer} />
       <Route path="/video" exact component={VideoPlayer} />
       <Route path="/infiniteScroll" exact component={Books} />
+      <Route path="/flexbox" exact component={FlexBoxContainer} />
       <Redirect to={"/"} />
     </Switch>
   );

@@ -1,0 +1,80 @@
+.container-1 div,
+.container-2 div,
+.container-3 div {
+  border: 1px #ccc solid;
+  padding: 10px;
+}
+
+.container-1 {
+  display: flex;
+
+  /* adjusts height of item and aligns on x/y axis depending on flex direction
+   * x axis if "flex-direction: column", y axis if "flex-direction: row"
+   * stretch - same width/height for all item (default)
+   * flex-start - min width/height, start from left/top
+   * flex-end - min width/height, start from right/bottom
+   * center - min width/height, aligns on center of container
+  */
+  align-items: center;
+
+  /* changes whether item should be displayed as rows or columns
+   * row - item on least amount of rows (looks like columns, default) x | x | x | x 
+   * column - item all on one column (looks like rows)
+      x
+      -
+      x
+      -
+      x
+  */
+  flex-direction: row;
+}
+
+@media (min-width: 768px) {
+  /* could add "display: flex" to container here so only show columns when window is big enough */
+}
+
+.box-1 {
+  flex: 2;
+  order: 2;
+}
+
+.box-2 {
+  flex: 1;
+  order: 1;
+}
+
+.box-3 {
+  flex: 1;
+  order: 3;
+}
+
+.container-2 {
+  display: flex;
+
+  /* if there's space, adds margins to move item
+   * flex-start - left align
+   * center - center
+   * flex-end - right align
+   * space-between - margins inbetween item
+   * space-around - margins inbetween item and on the sides
+  */
+  justify-content: space-between;
+}
+.container-2-box {
+  /* literally same as width/height depending on flex-direction  */
+  flex-basis: 25%;
+}
+
+.container-3 {
+  display: flex;
+  justify-content: space-between;
+
+  /* wraps item into 2 rows when screen shrinks too much
+   * only works with "flex-direction: row"  
+  */
+  flex-wrap: wrap;
+}
+
+.container-3-box {
+  flex-basis: 15%;
+}

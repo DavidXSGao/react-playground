@@ -22,6 +22,11 @@ export const SidebarData = [
     icon: <AiIcons.AiFillBook />,
   },
   {
+    title: "Flexbox",
+    path: "/flexbox",
+    icon: <AiIcons.AiFillBoxPlot />,
+  },
+  {
     title: "Toast Notifications",
     path: "/toast",
     icon: <AiIcons.AiFillBell />,
