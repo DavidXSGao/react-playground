@@ -13,7 +13,6 @@ import DatePickerContainer from "./DatePickerContainer";
 import VideoPlayer from "./VideoPlayer";
 import Books from "./InfiniteScroll/Books";
 import FlexBoxContainer from "./FlexBoxContainer";
-import CovidMap from "./CovidMap/CovidMap";
 
 function RouterSwitch() {
   return (

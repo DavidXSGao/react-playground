@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import "./App.css";
 
 import Sidebar from "./components/Sidebar/Sidebar";
 import RouterSwitch from "./components/RouterSwitch";
